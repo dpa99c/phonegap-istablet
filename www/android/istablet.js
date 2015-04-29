@@ -21,7 +21,7 @@
             window.isTablet = result;
         }, function(){
             console.error("Error calling IsTablet plugin");
-        }, 'IsTablet');
+        }, 'IsTablet', null, []);
     })();
 })();
     

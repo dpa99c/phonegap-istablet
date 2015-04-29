@@ -18,18 +18,22 @@
  * Cordova/Phonegap plugin for Android to determine if current device is a tablet
  * @author Dave Alden <dave@workingedge.co.uk>
  */
-package uk.co.workingedge.phonegap.plugin.IsTablet;
+package uk.co.workingedge.phonegap.plugin;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaInterface;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 
 
 public class IsTablet extends CordovaPlugin {
@@ -41,19 +45,20 @@ public class IsTablet extends CordovaPlugin {
 			CallbackContext callbackContext) throws JSONException {
 
 		Log.d(LOG_TAG, "Plugin execute called - " + this.toString() );
-		result = isTabletDevice(callbackContext);
-		callbackContext.success();
-		return result;
+		Context context=this.cordova.getActivity().getApplicationContext(); 
+		boolean result = isTabletDevice(context);
+		callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
+		return true;
 	}
 
-	private static boolean isTabletDevice(Context activityContext) {
-	        boolean device_large = ((activityContext.getResources().getConfiguration().screenLayout &
+	private boolean isTabletDevice(Context applicationContext) {
+	        boolean device_large = ((applicationContext.getResources().getConfiguration().screenLayout &
 	                Configuration.SCREENLAYOUT_SIZE_MASK) ==
 	                Configuration.SCREENLAYOUT_SIZE_LARGE);
 
 	        if (device_large) {
 	            DisplayMetrics metrics = new DisplayMetrics();
-	            Activity activity = (Activity) activityContext;
+	            Activity activity = this.cordova.getActivity();
 	            activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
 	            if (metrics.densityDpi == DisplayMetrics.DENSITY_DEFAULT

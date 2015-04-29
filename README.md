@@ -1,7 +1,7 @@
-Launch Navigator Cordova/Phonegap Plugin
+IsTablet Cordova/Phonegap Plugin
 =================================
 
-This Cordova/PhoneGap Plugin provides a mechanism to launch the native navigation app on iOS (Apple Maps), Android (Google Navigator), and Windows (Bing Maps) to get driving directions to a desired location. 
+This Cordova/PhoneGap Plugin indicates whether the current Android or iOS device is a tablet.
 
 This is for Cordova/Phonegap 3+
 
@@ -16,27 +16,24 @@ This is for Cordova/Phonegap 3+
 
 ## Automatically with CLI / Plugman
 
-Launch Navigator can be installed with [Cordova Plugman](https://github.com/apache/cordova-plugman) and the [PhoneGap CLI](http://docs.phonegap.com/en/edge/guide_cli_index.md.html).
+The plugin can be installed with [Cordova Plugman](https://github.com/apache/cordova-plugman) and the [PhoneGap CLI](http://docs.phonegap.com/en/edge/guide_cli_index.md.html).
 
 Here's how to install it with the CLI:
 
 
-    $ cordova plugin add uk.co.workingedge.phonegap.plugin.launchnavigator
+    $ cordova plugin add uk.co.workingedge.phonegap.plugin.IsTablet
 
 OR
 
-    $ phonegap plugin add uk.co.workingedge.phonegap.plugin.launchnavigator
+    $ phonegap plugin add uk.co.workingedge.phonegap.plugin.IsTablet
 
 
 # Using the plugin
+The plugin runs automatically when the app starts and sets an `isTablet` boolean property on the `window` object, so to use the plugin, simple inspect the value of `window.isTablet`.
 
+For example:
 
-### Example project
-
-https://github.com/dpa99c/phonegap-launch-navigator-example
-
-The above link is to an example Cordova 3 project which demonstrates usage of this plugin.
-The examples currently run on Android, iOS, Windows Phone 8.1, and Windows 8.1 (PC) platforms.
+    alert("This device is "+(window.isTablet?'':'NOT')+" a tablet");
 
 # Credits
 
