@@ -13,5 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-window.isTablet = !!navigator.userAgent.match(/iPad/i);
-    
+(function() {
+   window.isTablet = !!navigator.userAgent.match(/iPad/i);
+})();

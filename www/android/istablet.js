@@ -13,11 +13,15 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-var exec = require('cordova/exec');
 
-cordova.exec(function(result){
-    window.isTablet = result;
-}, function(){
-    console.error("Error calling IsTablet plugin");
-}, 'IsTablet');
+(function() {
+    var exec = require('cordova/exec');
+    (function(){
+        cordova.exec(function(result){
+            window.isTablet = result;
+        }, function(){
+            console.error("Error calling IsTablet plugin");
+        }, 'IsTablet');
+    })();
+})();
     
