@@ -9,6 +9,7 @@ This is for Cordova/Phonegap 3+
 
 * [Installing](#installing)
 * [Using the plugin](#using-the-plugin)
+* [Example project](#example-project)
 * [Credits](#credits)
 * [License](#license)
  
@@ -34,6 +35,13 @@ The plugin runs automatically when the app starts and sets an `isTablet` boolean
 For example:
 
     alert("This device is "+(window.isTablet?'':'NOT')+" a tablet");
+    
+# Example project
+
+https://github.com/dpa99c/phonegap-istablet-example
+
+The above link is to an example Cordova 3 project which demonstrates usage of this plugin.
+The example contains Android and iOS projects, and a compiled [Android APK](https://github.com/dpa99c/phonegap-istablet-example/blob/master/build/IsTablet.apk).
 
 # Credits
 
