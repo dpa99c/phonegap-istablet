@@ -21,11 +21,11 @@ The plugin can be installed with [Cordova Plugman](https://github.com/apache/cor
 Here's how to install it with the CLI:
 
 
-    $ cordova plugin add uk.co.workingedge.phonegap.plugin.IsTablet
+    $ cordova plugin add uk.co.workingedge.phonegap.plugin.istablet
 
 OR
 
-    $ phonegap plugin add uk.co.workingedge.phonegap.plugin.IsTablet
+    $ phonegap plugin add uk.co.workingedge.phonegap.plugin.istablet
 
 
 # Using the plugin
