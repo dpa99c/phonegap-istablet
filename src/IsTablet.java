@@ -53,7 +53,7 @@ public class IsTablet extends CordovaPlugin {
 
 	private boolean isTabletDevice(Context applicationContext) {
 	        boolean device_large = ((applicationContext.getResources().getConfiguration().screenLayout &
-	                Configuration.SCREENLAYOUT_SIZE_MASK) ==
+	                Configuration.SCREENLAYOUT_SIZE_MASK) >=
 	                Configuration.SCREENLAYOUT_SIZE_LARGE);
 
 	        if (device_large) {
