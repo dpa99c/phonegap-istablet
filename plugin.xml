@@ -2,7 +2,7 @@
 <plugin
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="uk.co.workingedge.phonegap.plugin.IsTablet"
+    id="uk.co.workingedge.phonegap.plugin.istablet"
     version="1.0.3">
 
   <name>Is Tablet</name>
@@ -11,7 +11,6 @@
 
   <engines>
     <engine name="cordova" version=">=3.0.0" />
-
   </engines>
   <repo>https://github.com/dpa99c/phonegap-istablet.git</repo>
   <issue>https://github.com/dpa99c/phonegap-istablet/issues</issue>
