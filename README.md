@@ -3,30 +3,39 @@ IsTablet Cordova/Phonegap Plugin
 
 This Cordova/PhoneGap Plugin indicates whether the current Android or iOS device is a tablet.
 
-This is for Cordova/Phonegap 3+
+The plugin is registered in the [the Cordova Registry](http://plugins.cordova.io/#/package/uk.co.workingedge.phonegap.plugin.istablet)(Cordova CLI 3/4) and on [npm](https://www.npmjs.com/package/uk.co.workingedge.phonegap.plugin.istablet) (Cordova CLI 5+) as `uk.co.workingedge.phonegap.plugin.istablet`
 
 ## Contents
 
-* [Installing](#installing)
+* [Installation](#installation)
 * [Using the plugin](#using-the-plugin)
 * [Example project](#example-project)
 * [Credits](#credits)
 * [License](#license)
  
-# Installing
+# Installation
 
-## Automatically with CLI / Plugman
-
-The plugin can be installed with [Cordova Plugman](https://github.com/apache/cordova-plugman) and the [PhoneGap CLI](http://docs.phonegap.com/en/edge/guide_cli_index.md.html).
-
-Here's how to install it with the CLI:
-
+## Using the Cordova/Phonegap [CLI](http://docs.phonegap.com/en/edge/guide_cli_index.md.html)
 
     $ cordova plugin add uk.co.workingedge.phonegap.plugin.istablet
-
-OR
-
     $ phonegap plugin add uk.co.workingedge.phonegap.plugin.istablet
+
+## Using [Cordova Plugman](https://github.com/apache/cordova-plugman)
+
+    $ plugman install --plugin=uk.co.workingedge.phonegap.plugin.istablet --platform=<platform> --project=<project_path> --plugins_dir=plugins
+
+For example, to install for the Android platform
+
+    $ plugman install --plugin=uk.co.workingedge.phonegap.plugin.istablet --platform=android --project=platforms/android --plugins_dir=plugins
+
+## PhoneGap Build
+Add the following xml to your config.xml to use the latest version of this plugin from [the Cordova Registry](http://plugins.cordova.io/#/package/uk.co.workingedge.phonegap.plugin.istablet) :
+
+    <gap:plugin name="uk.co.workingedge.phonegap.plugin.istablet" source="plugins.cordova.io" />
+
+or from [npm](https://www.npmjs.com/package/uk.co.workingedge.phonegap.plugin.istablet):
+
+    <gap:plugin name="uk.co.workingedge.phonegap.plugin.istablet" source="npm" />
 
 
 # Using the plugin
@@ -40,7 +49,7 @@ For example:
 
 https://github.com/dpa99c/phonegap-istablet-example
 
-The above link is to an example Cordova 3 project which demonstrates usage of this plugin.
+The above link is to an example Cordova project which demonstrates usage of this plugin.
 The example contains Android and iOS projects, and a compiled [Android APK](https://github.com/dpa99c/phonegap-istablet-example/blob/master/build/IsTablet.apk).
 
 # Credits
