@@ -3,11 +3,12 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="uk.co.workingedge.phonegap.plugin.istablet"
-    version="1.0.3">
+    version="1.0.4">
 
   <name>Is Tablet</name>
   <description>Cordova/Phonegap plugin to determine if current device is a tablet</description>
   <author>Dave Alden</author>
+  <license>MIT</license>
 
   <engines>
     <engine name="cordova" version=">=3.0.0" />
@@ -16,7 +17,7 @@
   <issue>https://github.com/dpa99c/phonegap-istablet/issues</issue>
 
   <license>MIT</license>
-  <keywords>cordova,phonegap,android,ios,tablet,phone,mobile,cellphone,detect,screen size,display</keywords>
+  <keywords>ecosystem:cordova,cordova,phonegap,android,ios,tablet,phone,mobile,cellphone,detect,screen size,display</keywords>
 
   <!-- Android -->
   <platform name="android">
