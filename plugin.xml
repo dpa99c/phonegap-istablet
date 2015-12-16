@@ -3,7 +3,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="uk.co.workingedge.phonegap.plugin.istablet"
-    version="1.0.4">
+    version="1.1.0">
 
   <name>Is Tablet</name>
   <description>Cordova/Phonegap plugin to determine if current device is a tablet</description>
@@ -19,11 +19,12 @@
   <license>MIT</license>
   <keywords>ecosystem:cordova,cordova,phonegap,android,ios,tablet,phone,mobile,cellphone,detect,screen size,display</keywords>
 
+  <js-module src="www/istablet.js" name="IsTablet">
+    <runs/>
+  </js-module>
+
   <!-- Android -->
   <platform name="android">
-    <js-module src="www/android/istablet.js" name="IsTablet">
-      <runs/>
-    </js-module>
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IsTablet">
@@ -31,14 +32,19 @@
       </feature>
     </config-file>
 
-    <source-file src="src/IsTablet.java" target-dir="src/uk/co/workingedge/phonegap/plugin" />
+    <source-file src="src/android/IsTablet.java" target-dir="src/uk/co/workingedge/phonegap/plugin" />
   </platform>
   
   <!-- iOS -->
   <platform name="ios">
-      <js-module src="www/ios/istablet.js" name="IsTablet">
-        <runs/>
-      </js-module>
+    <config-file target="config.xml" parent="/*">
+      <feature name="IsTablet">
+        <param name="ios-package" value="IsTablet"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/IsTablet.h" />
+    <source-file src="src/ios/IsTablet.m" />
   </platform>
 
 </plugin>
