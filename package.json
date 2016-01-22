@@ -30,11 +30,5 @@
         "detect",
         "screen size",
         "display"
-    ],
-    "engines": [
-        {
-            "name": "cordova",
-            "version": ">=3.0.0"
-        }
     ]
 }
