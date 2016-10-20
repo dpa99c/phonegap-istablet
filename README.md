@@ -1,4 +1,4 @@
-IsTablet Cordova/Phonegap Plugin
+IsTablet Cordova/Phonegap Plugin [![Latest Stable Version](https://img.shields.io/npm/v/uk.co.workingedge.phonegap.plugin.istablet.svg)](https://www.npmjs.com/package/uk.co.workingedge.phonegap.plugin.istablet) [![Total Downloads](https://img.shields.io/npm/dt/uk.co.workingedge.phonegap.plugin.istablet.svg)](https://npm-stat.com/charts.html?package=uk.co.workingedge.phonegap.plugin.istablet)
 =================================
 
 This Cordova/PhoneGap Plugin indicates whether the current Android or iOS device is a tablet.
