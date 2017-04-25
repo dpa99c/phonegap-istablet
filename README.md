@@ -61,6 +61,8 @@ The example contains Android and iOS projects, and a compiled [Android APK](http
 
 Android plugin code based on [this answer on stackoverflow](http://stackoverflow.com/a/18740974/777265) by [Pawan M](http://stackoverflow.com/users/648030/pawan-m)
 
+[Timon Orawski](https://github.com/timonorawski) for Windows implementation.
+
 License
 ================
 
