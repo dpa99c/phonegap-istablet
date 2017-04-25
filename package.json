@@ -1,5 +1,5 @@
 {
-    "version": "1.1.1",
+    "version": "1.2.0",
     "name": "uk.co.workingedge.phonegap.plugin.istablet",
     "cordova_name": "Is Tablet",
     "description": "Cordova/Phonegap plugin to determine if current device is a tablet.",
@@ -13,7 +13,8 @@
         "id": "uk.co.workingedge.phonegap.plugin.istablet",
         "platforms": [
           "android",
-          "ios"
+          "ios",
+          "windows"
         ]
     },
     "issue": "https://github.com/dpa99c/phonegap-istablet/issues",
