@@ -4,7 +4,8 @@ cordova.commandProxy.add("IsTablet", {
       var iAmTablet = false;
       var family = Windows.System.Profile.AnalyticsInfo.versionInfo.deviceFamily;
       if (family == "Windows.Desktop") {
-        iAmTablet = (Windows.UI.ViewManagement.UIViewSettings.getForCurrentView().userInteractionMode != Windows.UI.ViewManagement.UserInteractionMode.mouse);
+        iAmTablet = true;
+        //(Windows.UI.ViewManagement.UIViewSettings.getForCurrentView().userInteractionMode != Windows.UI.ViewManagement.UserInteractionMode.mouse);
       }
       successCallback(iAmTablet);
     } catch(e) {
