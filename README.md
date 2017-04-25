@@ -1,7 +1,9 @@
 IsTablet Cordova/Phonegap Plugin [![Latest Stable Version](https://img.shields.io/npm/v/uk.co.workingedge.phonegap.plugin.istablet.svg)](https://www.npmjs.com/package/uk.co.workingedge.phonegap.plugin.istablet) [![Total Downloads](https://img.shields.io/npm/dt/uk.co.workingedge.phonegap.plugin.istablet.svg)](https://npm-stat.com/charts.html?package=uk.co.workingedge.phonegap.plugin.istablet)
 =================================
 
-This Cordova/PhoneGap Plugin indicates whether the current Android or iOS device is a tablet.
+This Cordova/PhoneGap Plugin indicates whether the current device is a tablet.
+
+Supported platforms: Android, iOS, Windows 10 Mobile
 
 The plugin is registered on [npm](https://www.npmjs.com/package/uk.co.workingedge.phonegap.plugin.istablet) as `uk.co.workingedge.phonegap.plugin.istablet`
 
@@ -27,12 +29,6 @@ To help ensure this plugin is kept updated, new features are added and bugfixes 
     $ cordova plugin add uk.co.workingedge.phonegap.plugin.istablet
     $ phonegap plugin add uk.co.workingedge.phonegap.plugin.istablet
 
-**NOTE**: Make sure your Cordova CLI version is 5.0.0+ (check with `cordova -v`). Cordova 4.x and below uses the now deprecated [Cordova Plugin Registry](http://plugins.cordova.io) as its plugin repository, so using a version of Cordova 4.x or below will result in installing an [old version](http://plugins.cordova.io/#/package/uk.co.workingedge.phonegap.plugin.istablet) of this plugin.
-
-## Using [Cordova Plugman](https://github.com/apache/cordova-plugman)
-
-    $ plugman install --plugin=uk.co.workingedge.phonegap.plugin.istablet --platform=<platform> --project=<project_path> --plugins_dir=plugins
-
 For example, to install for the Android platform
 
     $ plugman install --plugin=uk.co.workingedge.phonegap.plugin.istablet --platform=android --project=platforms/android --plugins_dir=plugins
@@ -52,10 +48,7 @@ For example:
     
 # Example project
 
-https://github.com/dpa99c/phonegap-istablet-example
-
-The above link is to an example Cordova project which demonstrates usage of this plugin.
-The example contains Android and iOS projects, and a compiled [Android APK](https://github.com/dpa99c/phonegap-istablet-example/blob/master/build/IsTablet.apk).
+The [example Cordova project](https://github.com/dpa99c/phonegap-istablet-example) demonstrates usage of this plugin.
 
 # Credits
 
