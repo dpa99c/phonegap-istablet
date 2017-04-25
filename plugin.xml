@@ -34,7 +34,7 @@
 
     <source-file src="src/android/IsTablet.java" target-dir="src/uk/co/workingedge/phonegap/plugin" />
   </platform>
-  
+
   <!-- iOS -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
@@ -47,4 +47,9 @@
     <source-file src="src/ios/IsTablet.m" />
   </platform>
 
+  <platform name="windows">
+    <js-module src="src/windows/istabletproxy.js" name="IsTabletProxy">
+      <merges target="" />
+    </js-module>
+  </platform>
 </plugin>

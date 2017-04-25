@@ -15,13 +15,18 @@
 */
 
 (function() {
+    var runPlugin =  function() {
+      cordova.exec(function(result){
+          window.isTablet = !!result;
+      }, function(){
+          console.error("Error calling IsTablet plugin");
+      }, 'IsTablet', 'isTabletDevice', []);
+    };
     var exec = require('cordova/exec');
     (function(){
-        cordova.exec(function(result){
-            window.isTablet = !!result;
-        }, function(){
-            console.error("Error calling IsTablet plugin");
-        }, 'IsTablet', 'isTabletDevice', []);
+      runPlugin();
     })();
+    var channel = require("cordova/channel");
+    // have to wait until cordova is ready, because windows proxy js files are not pre-loaded
+    channel.onCordovaReady.subscribe(runPlugin);
 })();
-
