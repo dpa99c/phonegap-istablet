@@ -1,5 +1,5 @@
 cordova.commandProxy.add("IsTablet", {
-  isTabletDevice: function(successCallback, errorCallback) {
+  isTabletDevice: function(successCallback, errorCallback, input) {
     try {
       var iAmTablet = false;
       var family = Windows.System.Profile.AnalyticsInfo.versionInfo.deviceFamily;
